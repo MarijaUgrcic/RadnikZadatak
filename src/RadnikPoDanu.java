@@ -2,6 +2,7 @@ import java.text.DecimalFormat;
 
 public class RadnikPoDanu extends Radnik {
     double plataPoDanu;
+    private int brRadnihDanaUMesecu = 22;
 
     public RadnikPoDanu(String ime, String prezime, String jmbg, String ziroRacun, double plataPoDanu) {
         super(ime, prezime, jmbg, ziroRacun);
@@ -10,7 +11,7 @@ public class RadnikPoDanu extends Radnik {
 
     @Override
     public void isplatiPlatu() {
-        double plata = plataPoDanu * 22;
+        double plata = plataPoDanu * brRadnihDanaUMesecu;
         DecimalFormat df = new DecimalFormat("#,###.00");
         System.out.println("Radnik{" +
                 "ime='" + ime + '\'' +
