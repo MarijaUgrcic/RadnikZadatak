@@ -11,15 +11,15 @@ public class Main {
         //u main klasi podakte za svaki objekat puniti preko Scanner klase
 
 //        RadnikPoSatu radnikPoSatu = new RadnikPoSatu("Jana", "Janic",
-//                "2308999716485", "325-98678-66", 900);
+//                "2308999716485", "325-98678-66", 900, 10);
 //
 //        RadnikPoDanu radnikPoDanu = new RadnikPoDanu("Ivan", "Ivic",
-//                "1409989756598", "325-83758-76", 7500);
+//                "1409989756598", "325-83758-76", 2500, 20);
 //
 //        RadnikFiksno radnikFiksno = new RadnikFiksno("Ana", "Antic",
 //                "1706975716598", "325-84658-88", 136660);
 
-Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Unesite podatke za radnika za platu po satu: ");
         System.out.print("Unesite ime: ");
         String a = scanner.nextLine();
@@ -29,10 +29,12 @@ Scanner scanner = new Scanner(System.in);
         String c = scanner.nextLine();
         System.out.print("Unesite ziro racun: ");
         String d = scanner.nextLine();
-        System.out.print("Unesite platu po danu: ");
+        System.out.print("Unesite platu po satu: ");
         double e = scanner.nextDouble();
+        System.out.print("Unesite broj radnih sati: ");
+        int t = scanner.nextInt();
 
-        RadnikPoSatu radnikPoSatu = new RadnikPoSatu(a, b, c, d, e);
+        RadnikPoSatu radnikPoSatu = new RadnikPoSatu(a, b, c, d, e, t);
 
         System.out.println("Unesite podatke za radnika za platu po danu:");
         String w = scanner.nextLine();
@@ -46,7 +48,9 @@ Scanner scanner = new Scanner(System.in);
         String j = scanner.nextLine();
         System.out.print("Unesite platu po danu: ");
         double k = scanner.nextDouble();
-        RadnikPoDanu radnikPoDanu = new RadnikPoDanu(f, g, h, j, k);
+        System.out.print("Unesite broj radnih dana: ");
+        int u = scanner.nextInt();
+        RadnikPoDanu radnikPoDanu = new RadnikPoDanu(f, g, h, j, k, u);
 
         System.out.println("Unesite podatke za radnika za platu fiksno:");
         String y = scanner.nextLine();
